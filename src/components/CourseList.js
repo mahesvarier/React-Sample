@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function CourseList(props) {
   function renderRow(course) {
@@ -23,4 +24,11 @@ function CourseList(props) {
   );
 }
 
+CourseList.propTypes = {
+  courses: PropTypes.array.isRequired,
+};
+
+CourseList.defaultProp = {
+  courses: [],
+};
 export default CourseList;

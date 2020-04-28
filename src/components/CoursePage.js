@@ -9,16 +9,6 @@ function CoursePage() {
     getCourses().then((_courses) => setCourses(_courses));
   }, []);
 
-  function renderRow(course) {
-    return (
-      <tr key={course.id}>
-        <td>{course.title}</td>
-        <td>{course.authorId}</td>
-        <td>{course.category}</td>
-      </tr>
-    );
-  }
-
   return (
     <>
       <h2>Courses</h2>
